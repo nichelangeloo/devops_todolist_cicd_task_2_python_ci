@@ -47,13 +47,11 @@ jobs:
       - name: Check code style
         continue-on-error: true
         run: |
-          cd ../
           flake8 . --show-source --statistics
 
       - name: Check Complexity
         continue-on-error: true
         run: |
-          cd ../
           flake8 . --statistics --max-complexity=10 --exit-zero
 
       - name: Upload python artifact
